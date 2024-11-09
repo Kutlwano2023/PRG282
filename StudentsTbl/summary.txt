@@ -1,0 +1,5 @@
+ID,Name,Age,Course
+3,Athe,22,BCOM
+
+Total number of students1
+Average students age22

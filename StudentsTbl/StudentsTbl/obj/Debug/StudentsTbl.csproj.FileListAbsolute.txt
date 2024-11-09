@@ -1,0 +1,10 @@
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\bin\Debug\StudentsTbl.exe.config
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\bin\Debug\StudentsTbl.exe
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\bin\Debug\StudentsTbl.pdb
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\obj\Debug\StudentsTbl.csproj.AssemblyReference.cache
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\obj\Debug\StudentsTbl.Form1.resources
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\obj\Debug\StudentsTbl.Properties.Resources.resources
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\obj\Debug\StudentsTbl.csproj.GenerateResource.cache
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\obj\Debug\StudentsTbl.csproj.CoreCompileInputs.cache
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\obj\Debug\StudentsTbl.exe
+C:\Users\kutlw\source\repos\StudentsTbl\StudentsTbl\obj\Debug\StudentsTbl.pdb

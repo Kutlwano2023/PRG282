@@ -1,2 +1,4 @@
-3,Athe,22,BCOM
-2,Nthabeleng,20,BIT
+ID, Name, Age, Course,
+1383, Athe,22, BCOM
+1762, Nthabeleng,20, BCOM
+1819, Kutlwano,21, BIT

@@ -51,6 +51,16 @@ namespace StudentsTbl
         {
             try
             {
+                if (id.ToString().Length != 4)
+                {
+                    MessageBox.Show("Student ID needs to consist of 4 characters");
+                    return;
+                }
+                if (age < 18)//if the user enters an age that is younger than 18, message displays invalid age.
+                {
+                    MessageBox.Show("Invalid age");
+                    return;
+                }
 
                
                 if (string.IsNullOrWhiteSpace(id.ToString()) || string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(age.ToString()) || string.IsNullOrWhiteSpace(course))//Valdation if all courses have not been filled
@@ -58,19 +68,13 @@ namespace StudentsTbl
                     MessageBox.Show("Please fill in all fields.");
                     return;
                 }
-                if (age < 18)//If user enters an age less than 18 displays invalid age
-                {
-                    MessageBox.Show("Invalid age");
-                }
+
 
                 if (!string.Equals(course, "BIT", StringComparison.OrdinalIgnoreCase) && !string.Equals(course, "BCOMP", StringComparison.OrdinalIgnoreCase) && !string.Equals(course, "DIT", StringComparison.OrdinalIgnoreCase))//Display invalid course if it's neither of the courses mentioned
                 {
                     MessageBox.Show("Invalid course");
                 }
-                if (id.ToString().Length != 4)//Student ID must consist of 4 charactes
-                {
-                    MessageBox.Show("Student ID needs to consist of 4 characters");
-                }
+                
                 string studentRecord = $"{id},{name},{age},{course}";//Add to student record
                 File.AppendAllText(studentFile, studentRecord + Environment.NewLine);//Add new students 
                 MessageBox.Show("Student successfully added");//Message to show students successfully added to the record

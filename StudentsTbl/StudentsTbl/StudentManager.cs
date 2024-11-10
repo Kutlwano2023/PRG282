@@ -52,8 +52,7 @@ namespace StudentsTbl
             try
             {
 
-                string studentRecord = $"{id},{name},{age},{course}";//Add to student record
-                File.AppendAllText(studentFile, studentRecord + Environment.NewLine);//Add new students 
+               
                 if (string.IsNullOrWhiteSpace(id.ToString()) || string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(age.ToString()) || string.IsNullOrWhiteSpace(course))//Valdation if all courses have not been filled
                 {
                     MessageBox.Show("Please fill in all fields.");
@@ -72,6 +71,9 @@ namespace StudentsTbl
                 {
                     MessageBox.Show("Student ID needs to consist of 4 characters");
                 }
+                string studentRecord = $"{id},{name},{age},{course}";//Add to student record
+                File.AppendAllText(studentFile, studentRecord + Environment.NewLine);//Add new students 
+                MessageBox.Show("Student successfully added");//Message to show students successfully added to the record
             }
             catch(Exception ex)
             {
@@ -115,14 +117,11 @@ namespace StudentsTbl
             try
             {
                 var students = GetAllStudents();//Get all students
-                var studentUpdate = students.Find(s => s.Id == id);//Takes the first or default id 
-                if (studentUpdate != null)
+                var studentUpdate = students.Find(s => s.Id == id);//Takes the id from user input and find the ID in the list 
+                if (studentUpdate == null)//Checks if student exists
                 {
-                    //Instatiates the new values
-                    studentUpdate.Name = studentName;
-                    studentUpdate.Age = studentAge;
-                    studentUpdate.Course = studentCourse;
-                    SaveAllStudents(students);
+                   MessageBox.Show("Student ID not found");
+                   return;
 
                 }
                 if (string.IsNullOrWhiteSpace(id.ToString()) || string.IsNullOrWhiteSpace(studentName) || string.IsNullOrWhiteSpace(studentAge.ToString()) || string.IsNullOrWhiteSpace(studentCourse)) //If either of the fields are not entered display message box
@@ -143,6 +142,13 @@ namespace StudentsTbl
                 {
                     MessageBox.Show("Student ID needs to consist of 4 characters");
                 }
+                   //Instatiates the new values
+                    studentUpdate.Name = studentName;
+                    studentUpdate.Age = studentAge;
+                    studentUpdate.Course = studentCourse;
+                    SaveAllStudents(students);
+                    MessageBox.Show("Student updated successfully");
+
             }
             catch(Exception ex)
             {

@@ -63,10 +63,12 @@ namespace StudentsTbl
                     MessageBox.Show("Invalid age");
                 }
 
-                if (!string.Equals(course, "BIT", StringComparison.OrdinalIgnoreCase) || !string.Equals(course, "BCOMP", StringComparison.OrdinalIgnoreCase) || !string.Equals(course, "DIT", StringComparison.OrdinalIgnoreCase))//Display invalid course if it's neither of the courses mentioned
+                if (!string.Equals(course, "BIT", StringComparison.OrdinalIgnoreCase) && !string.Equals(course, "BCOMP", StringComparison.OrdinalIgnoreCase) && !string.Equals(course, "DIT", StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show("Invalid course");
+                     MessageBox.Show("Invalid course");
+                        return;
                 }
+
                 if (id.ToString().Length != 4)//Student ID must consist of 4 charactes
                 {
                     MessageBox.Show("Student ID needs to consist of 4 characters");

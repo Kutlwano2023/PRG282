@@ -63,7 +63,7 @@ namespace StudentsTbl
                     MessageBox.Show("Invalid age");
                 }
 
-                if (!string.Equals(course, "BIT", StringComparison.OrdinalIgnoreCase) || !string.Equals(course, "BCOMP", StringComparison.OrdinalIgnoreCase) || !string.Equals(course, "DIT", StringComparison.OrdinalIgnoreCase))//Display invalid course if it's neither of the courses mentioned
+                if (!string.Equals(course, "BIT", StringComparison.OrdinalIgnoreCase) && !string.Equals(course, "BCOMP", StringComparison.OrdinalIgnoreCase) && !string.Equals(course, "DIT", StringComparison.OrdinalIgnoreCase))//Display invalid course if it's neither of the courses mentioned
                 {
                     MessageBox.Show("Invalid course");
                 }
